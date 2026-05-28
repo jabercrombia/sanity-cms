@@ -40,9 +40,44 @@ Work history entries for the home page.
 | `startDate` | date | yes | Format `YYYY-MM-DD` |
 | `endDate` | date | | Leave blank for current role |
 | `jobDescription` | text | | Markdown supported |
+| `jobDescription_es` | text | | Auto-translated — Spanish |
+| `jobDescription_fr` | text | | Auto-translated — French |
+| `jobDescription_it` | text | | Auto-translated — Italian |
 | `logo` | image | | Dark/black logo — inverted to white in UI |
 
 Default sort: **Start Date, Newest First**
+
+---
+
+## AI Translation
+
+Translates `experience` documents into Spanish, French, and Italian using the Claude API.
+
+### Setup
+
+Add the following to a `.env` file at the project root:
+
+```
+ANTHROPIC_API_KEY=sk-ant-...
+SANITY_API_TOKEN=sk-...
+```
+
+- **Anthropic API key** — [console.anthropic.com](https://console.anthropic.com)
+- **Sanity API token** — [sanity.io/manage](https://sanity.io/manage) → your project → API → Tokens (set permission to **Editor**)
+
+### Run
+
+```bash
+npm run translate
+```
+
+Translations are saved back to each document as `jobDescription_es`, `jobDescription_fr`, and `jobDescription_it`. Re-running the script overwrites existing translations.
+
+### Tone
+
+Edit the `TONE` constant in `scripts/translate-experience.ts` to adjust the translation style. The default is confident and achievement-focused, preserving technical terms as-is.
+
+---
 
 ## Resources
 
