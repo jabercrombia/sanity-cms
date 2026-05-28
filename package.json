@@ -9,12 +9,14 @@
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy",
     "dev": "sanity dev",
-    "start": "sanity start"
+    "start": "sanity start",
+    "translate": "npx tsx --env-file=.env scripts/translate-experience.ts"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.99.0",
     "@sanity/document-internationalization": "^6.1.1",
     "@sanity/language-filter": "^5.0.2",
     "@sanity/vision": "^5.27.0",

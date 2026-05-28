@@ -39,6 +39,27 @@ export default {
       description: 'Supports markdown. Displayed on the home page. Falls back to Summary if blank.',
     },
     {
+      name: 'jobDescription_es',
+      title: 'Job Description (Spanish)',
+      type: 'text',
+      rows: 6,
+      readOnly: true,
+    },
+    {
+      name: 'jobDescription_fr',
+      title: 'Job Description (French)',
+      type: 'text',
+      rows: 6,
+      readOnly: true,
+    },
+    {
+      name: 'jobDescription_it',
+      title: 'Job Description (Italian)',
+      type: 'text',
+      rows: 6,
+      readOnly: true,
+    },
+    {
       name: 'logo',
       title: 'Company Logo',
       type: 'image',
